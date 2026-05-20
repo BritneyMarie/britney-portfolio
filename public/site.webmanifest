@@ -1,0 +1,16 @@
+{
+  "name": "Britney Chauke | Senior Developer",
+  "short_name": "Britney Chauke",
+  "description": "Senior Developer, Full-Stack Engineer and Software Architect based in Pretoria, South Africa.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FDFCFB",
+  "theme_color": "#F472B6",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

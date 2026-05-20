@@ -1,0 +1,43 @@
+{
+  "categories": [
+    {
+      "id": "frontend",
+      "label": "Frontend",
+      "icon": "bx-palette",
+      "pillClass": "pill-pink",
+      "skills": [
+        "HTML5", "CSS3", "JavaScript", "Bootstrap", "React",
+        "Razor Views", "Responsive Design", "UX / UI"
+      ]
+    },
+    {
+      "id": "backend",
+      "label": "Backend",
+      "icon": "bx-server",
+      "pillClass": "pill-blue",
+      "skills": [
+        "C#", "ASP.NET Core MVC", "REST APIs",
+        "Entity Framework Core", "LINQ", "SQL"
+      ]
+    },
+    {
+      "id": "cloud",
+      "label": "Cloud & DevOps",
+      "icon": "bx-cloud",
+      "pillClass": "pill-yellow",
+      "skills": [
+        "Azure App Services", "Azure OIDC",
+        "GitHub Actions", "CI / CD"
+      ]
+    },
+    {
+      "id": "tools",
+      "label": "Tools & Workflow",
+      "icon": "bx-wrench",
+      "pillClass": "pill-green",
+      "skills": [
+        "Git", "Visual Studio", "Postman", "Swagger", "Figma"
+      ]
+    }
+  ]
+}

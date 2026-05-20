@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <meta name="description" content="Britney Chauke – Senior Developer, Full-Stack Engineer and Software Architect based in Pretoria, South Africa. Building scalable, elegant, and user-focused digital solutions." />
+  <meta name="keywords" content="Britney Chauke, Senior Developer, Full-Stack Engineer, ASP.NET Core, C#, Azure, Software Architect, Pretoria, South Africa" />
+  <meta name="author" content="Britney Chauke" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Britney Chauke | Senior Developer" />
+  <meta property="og:description" content="Building scalable, elegant, and user-focused digital solutions." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/profile.jpg" />
+
+  <!-- Theme -->
+  <meta name="theme-color" content="#F472B6" />
+
+  <title>Britney Chauke | Senior Developer</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Boxicons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./styles/variables.css" />
+  <link rel="stylesheet" href="./styles/global.css" />
+  <link rel="stylesheet" href="./styles/components.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVBAR
+       ============================================================ -->
+  <header class="navbar" id="navbar">
+    <nav class="container nav-inner" aria-label="Main navigation">
+      <a href="#home" class="nav-logo" aria-label="Britney Chauke – back to top">
+        <span class="nav-logo-badge" aria-hidden="true">BC</span>
+        <span class="nav-logo-name">Britney Chauke</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#home"       class="nav-link active">Home</a></li>
+        <li><a href="#about"      class="nav-link">About</a></li>
+        <li><a href="#skills"     class="nav-link">Skills</a></li>
+        <li><a href="#projects"   class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#contact"    class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="/assets/britney-cv.pdf" download class="btn btn-primary nav-cv-btn">
+          <i class='bx bx-download' aria-hidden="true"></i> Download CV
+        </a>
+        <button class="nav-hamburger" id="nav-hamburger"
+                aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section class="hero section" id="home" aria-label="Introduction">
+      <div class="hero-shapes" aria-hidden="true">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+      </div>
+
+      <div class="container hero-inner">
+
+        <!-- Text -->
+        <div class="hero-content">
+          <span class="section-label reveal">📍 Pretoria, South Africa</span>
+
+          <h1 class="hero-title reveal reveal-delay-1">
+            Hi, I'm <span class="text-primary">Britney</span><br>Chauke
+          </h1>
+
+          <p class="hero-roles reveal reveal-delay-2">
+            Senior Developer &middot; Full-Stack Engineer &middot; Software Architect
+          </p>
+
+          <p class="hero-tagline reveal reveal-delay-3">
+            Building scalable, elegant, and user-focused digital solutions.
+          </p>
+
+          <div class="hero-cta reveal reveal-delay-4">
+            <a href="#projects" class="btn btn-primary">
+              View My Work <i class='bx bx-right-arrow-alt' aria-hidden="true"></i>
+            </a>
+            <a href="/assets/britney-cv.pdf" download class="btn btn-outline">
+              <i class='bx bx-download' aria-hidden="true"></i> Download CV
+            </a>
+          </div>
+
+          <div class="hero-socials reveal reveal-delay-4">
+            <a href="https://github.com/britneychauke" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+              <i class='bx bxl-github' aria-hidden="true"></i>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" id="hero-linkedin">
+              <i class='bx bxl-linkedin' aria-hidden="true"></i>
+            </a>
+            <a href="mailto:mariechauke@outlook.com" aria-label="Send email">
+              <i class='bx bx-envelope' aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Photo -->
+        <div class="hero-image reveal reveal-delay-2">
+          <div class="hero-img-frame">
+            <div class="hero-img-placeholder" aria-hidden="true">
+              <i class='bx bx-user'></i>
+              <p>Drop profile.jpg in<br>public/assets/</p>
+            </div>
+            <img src="/assets/profile.jpg"
+                 alt="Britney Chauke – Senior Developer"
+                 class="hero-photo"
+                 onerror="this.style.display='none'" />
+          </div>
+
+          <div class="hero-badge hero-badge-1" aria-hidden="true">
+            <i class='bx bx-code-alt'></i>
+            <span>Full-Stack Dev</span>
+          </div>
+          <div class="hero-badge hero-badge-2" aria-hidden="true">
+            <i class='bx bxl-azure'></i>
+            <span>Azure Cloud</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ABOUT
+         ============================================================ -->
+    <section class="about section" id="about" aria-label="About Britney Chauke">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Get to Know Me</span>
+          <h2 class="section-title">About Me</h2>
+        </div>
+
+        <div class="about-inner">
+          <div class="about-content reveal">
+            <p class="about-text">
+              I'm a <strong>Senior Developer</strong> and Full-Stack Engineer based in Pretoria, South Africa,
+              with a strong foundation in Information Technology. My journey began with a fascination for how
+              software systems are built end-to-end — from intuitive user interfaces to robust, scalable
+              back-end architectures that power real-world products.
+            </p>
+            <p class="about-text">
+              Over the years, I have deepened my expertise in <strong>ASP.NET Core</strong>, <strong>C#</strong>,
+              <strong>Entity Framework Core</strong>, <strong>Azure</strong>, and <strong>MVC architecture</strong>.
+              I specialise in building marketplace platforms, admin dashboards, and data-driven systems that
+              solve real problems — including architecting the ShelfTextbooks student marketplace with escrow
+              payments and analytics, and co-building UnganaConnect as both Business Analyst and Frontend
+              Developer using React.
+            </p>
+            <p class="about-text">
+              My philosophy is simple: write <strong>clean, maintainable code</strong>, design with the
+              user in mind, and build systems that can grow over time. Great software isn't just functional —
+              it's thoughtful, accessible, and built to last.
+            </p>
+            <a href="/assets/britney-cv.pdf" download class="btn btn-primary about-cv-btn">
+              <i class='bx bx-download' aria-hidden="true"></i> Download My CV
+            </a>
+          </div>
+
+          <div class="about-stats reveal reveal-delay-2" aria-label="Key statistics">
+            <div class="stat-card">
+              <span class="stat-number">3+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">2</span>
+              <span class="stat-label">Major Projects</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">15+</span>
+              <span class="stat-label">Technologies</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Committed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SKILLS
+         ============================================================ -->
+    <section class="skills section" id="skills" aria-label="Skills and technologies">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">What I Work With</span>
+          <h2 class="section-title">Skills &amp; Technologies</h2>
+          <p class="section-subtitle">A full-stack toolkit built for modern web development.</p>
+        </div>
+
+        <div class="skills-grid">
+
+          <!-- Frontend -->
+          <div class="skills-card reveal">
+            <div class="skills-card-header skills-frontend">
+              <i class='bx bx-palette' aria-hidden="true"></i>
+              <h3>Frontend</h3>
+            </div>
+            <div class="skills-pills">
+              <span class="pill pill-pink">HTML5</span>
+              <span class="pill pill-pink">CSS3</span>
+              <span class="pill pill-pink">JavaScript</span>
+              <span class="pill pill-pink">Bootstrap</span>
+              <span class="pill pill-pink">React</span>
+              <span class="pill pill-pink">Razor Views</span>
+              <span class="pill pill-pink">Responsive Design</span>
+              <span class="pill pill-pink">UX / UI</span>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="skills-card reveal reveal-delay-1">
+            <div class="skills-card-header skills-backend">
+              <i class='bx bx-server' aria-hidden="true"></i>
+              <h3>Backend</h3>
+            </div>
+            <div class="skills-pills">
+              <span class="pill pill-blue">C#</span>
+              <span class="pill pill-blue">ASP.NET Core MVC</span>
+              <span class="pill pill-blue">REST APIs</span>
+              <span class="pill pill-blue">Entity Framework Core</span>
+              <span class="pill pill-blue">LINQ</span>
+              <span class="pill pill-blue">SQL</span>
+            </div>
+          </div>
+
+          <!-- Cloud & DevOps -->
+          <div class="skills-card reveal reveal-delay-2">
+            <div class="skills-card-header skills-cloud">
+              <i class='bx bx-cloud' aria-hidden="true"></i>
+              <h3>Cloud &amp; DevOps</h3>
+            </div>
+            <div class="skills-pills">
+              <span class="pill pill-yellow">Azure App Services</span>
+              <span class="pill pill-yellow">Azure OIDC</span>
+              <span class="pill pill-yellow">GitHub Actions</span>
+              <span class="pill pill-yellow">CI / CD</span>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skills-card reveal reveal-delay-3">
+            <div class="skills-card-header skills-tools">
+              <i class='bx bx-wrench' aria-hidden="true"></i>
+              <h3>Tools &amp; Workflow</h3>
+            </div>
+            <div class="skills-pills">
+              <span class="pill pill-green">Git</span>
+              <span class="pill pill-green">Visual Studio</span>
+              <span class="pill pill-green">Postman</span>
+              <span class="pill pill-green">Swagger</span>
+              <span class="pill pill-green">Figma</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PROJECTS
+         ============================================================ -->
+    <section class="projects section" id="projects" aria-label="Portfolio projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">What I've Built</span>
+          <h2 class="section-title">Projects</h2>
+          <p class="section-subtitle">Real-world applications built with care and purpose.</p>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- ── ShelfTextbooks ── -->
+          <article class="project-card project-featured reveal">
+            <div class="project-card-img">
+              <div class="project-img-placeholder">
+                <i class='bx bx-book-open' aria-hidden="true"></i>
+                <span>ShelfTextbooks</span>
+              </div>
+              <span class="project-badge">Flagship Project</span>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-title">ShelfTextbooks</h3>
+              <p class="project-description">
+                A full-featured student marketplace platform for buying and selling second-hand
+                textbooks, with built-in escrow payments, delivery confirmation, refund workflows,
+                and comprehensive admin analytics.
+              </p>
+              <ul class="project-features" aria-label="Key features">
+                <li><i class='bx bx-check-circle' aria-hidden="true"></i> Escrow payment system</li>
+                <li><i class='bx bx-check-circle' aria-hidden="true"></i> Delivery confirmation workflows</li>
+                <li><i class='bx bx-check-circle' aria-hidden="true"></i> Refund management</li>
+                <li><i class='bx bx-check-circle' aria-hidden="true"></i> Admin dashboards &amp; analytics</li>
+                <li><i class='bx bx-check-circle' aria-hidden="true"></i> Seller analytics portal</li>
+                <li><i class='bx bx-check-circle' aria-hidden="true"></i> Azure OIDC authentication</li>
+              </ul>
+              <div class="project-tech">
+                <span class="pill pill-pink">ASP.NET Core</span>
+                <span class="pill pill-blue">C#</span>
+                <span class="pill pill-blue">EF Core</span>
+                <span class="pill pill-yellow">Azure</span>
+                <span class="pill pill-pink">Bootstrap</span>
+                <span class="pill pill-blue">SQL</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/britneychauke" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+                  <i class='bx bxl-github' aria-hidden="true"></i> GitHub
+                </a>
+                <a href="#" class="btn btn-primary">
+                  Live Demo <i class='bx bx-link-external' aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── UnganaConnect ── -->
+          <article class="project-card reveal reveal-delay-2">
+            <div class="project-card-img">
+              <div class="project-img-placeholder blue-tint">
+                <i class='bx bx-network-chart' aria-hidden="true"></i>
+                <span>UnganaConnect</span>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-title">UnganaConnect</h3>
+              <p class="project-description">
+                A digital capacity-building platform connecting disadvantaged communities across
+                South Africa to short courses and learning opportunities — widening access to
+                skills development where it matters most.
+              </p>
+              <ul class="project-features" aria-label="Key features">
+                <li><i class='bx bx-check-circle' aria-hidden="true"></i> Course discovery &amp; enrollment</li>
+                <li><i class='bx bx-check-circle' aria-hidden="true"></i> Community user profiles</li>
+                <li><i class='bx bx-check-circle' aria-hidden="true"></i> Capacity-building resources</li>
+                <li><i class='bx bx-check-circle' aria-hidden="true"></i> Responsive, accessible UI</li>
+              </ul>
+              <div class="project-tech">
+                <span class="pill pill-pink">React</span>
+                <span class="pill pill-blue">JavaScript</span>
+                <span class="pill pill-green">UX / UI Design</span>
+              </div>
+              <p class="project-role">
+                <i class='bx bx-user-pin' aria-hidden="true"></i>
+                Role: Business Analyst &amp; Frontend Developer
+              </p>
+              <div class="project-links">
+                <a href="#" class="btn btn-ghost" aria-disabled="true">
+                  <i class='bx bxl-github' aria-hidden="true"></i> GitHub (coming soon)
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         EXPERIENCE
+         ============================================================ -->
+    <section class="experience section" id="experience" aria-label="Work experience">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Where I've Worked</span>
+          <h2 class="section-title">Experience</h2>
+        </div>
+
+        <div class="timeline" role="list">
+
+          <div class="timeline-item reveal" role="listitem">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Senior Developer</h3>
+                  <p class="timeline-company">ShelfTextbooks</p>
+                </div>
+                <span class="timeline-date">2023 – Present</span>
+              </div>
+              <ul class="timeline-list" aria-label="Responsibilities">
+                <li>Architected marketplace workflows including escrow payments, delivery confirmation, and refund processing end-to-end</li>
+                <li>Built comprehensive admin dashboards with real-time sales analytics and seller performance metrics</li>
+                <li>Designed scalable domain models and implemented the full EF Core data access layer</li>
+                <li>Integrated Azure OIDC authentication and configured CI/CD pipelines via GitHub Actions</li>
+                <li>Led performance optimisation, security hardening, and maintainability improvements across the platform</li>
+                <li>Drove technical decision-making across the full stack — from UI to cloud deployment</li>
+              </ul>
+              <div class="timeline-tech">
+                <span class="pill pill-pink">ASP.NET Core</span>
+                <span class="pill pill-blue">C#</span>
+                <span class="pill pill-yellow">Azure</span>
+                <span class="pill pill-blue">EF Core</span>
+                <span class="pill pill-green">GitHub Actions</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT
+         ============================================================ -->
+    <section class="contact section" id="contact" aria-label="Contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Get In Touch</span>
+          <h2 class="section-title">Let's Work Together</h2>
+          <p class="section-subtitle">Have a project in mind, or just want to connect? I'd love to hear from you.</p>
+        </div>
+
+        <div class="contact-inner">
+
+          <!-- Info -->
+          <div class="contact-info reveal">
+            <h3 class="contact-info-title">Contact Details</h3>
+            <div class="contact-info-items">
+
+              <a href="mailto:mariechauke@outlook.com" class="contact-info-item">
+                <div class="contact-icon" aria-hidden="true">
+                  <i class='bx bx-envelope'></i>
+                </div>
+                <div>
+                  <span class="contact-info-label">Email</span>
+                  <span class="contact-info-value">mariechauke@outlook.com</span>
+                </div>
+              </a>
+
+              <a href="https://github.com/britneychauke" target="_blank" rel="noopener noreferrer" class="contact-info-item">
+                <div class="contact-icon" aria-hidden="true">
+                  <i class='bx bxl-github'></i>
+                </div>
+                <div>
+                  <span class="contact-info-label">GitHub</span>
+                  <span class="contact-info-value">github.com/britneychauke</span>
+                </div>
+              </a>
+
+              <a href="#" target="_blank" rel="noopener noreferrer" class="contact-info-item" id="contact-linkedin">
+                <div class="contact-icon" aria-hidden="true">
+                  <i class='bx bxl-linkedin'></i>
+                </div>
+                <div>
+                  <span class="contact-info-label">LinkedIn</span>
+                  <span class="contact-info-value">Add your LinkedIn URL</span>
+                </div>
+              </a>
+
+            </div>
+          </div>
+
+          <!-- Form -->
+          <div class="contact-form-wrapper reveal reveal-delay-2">
+            <form class="contact-form" id="contact-form" novalidate aria-label="Contact form">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name"
+                       placeholder="Your full name" required
+                       autocomplete="name" minlength="2" maxlength="100" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email"
+                       placeholder="your@email.com" required
+                       autocomplete="email" maxlength="254" />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5"
+                          placeholder="Tell me about your project or opportunity..."
+                          required minlength="10" maxlength="2000"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary contact-submit">
+                <span class="btn-text">Send Message <i class='bx bx-send' aria-hidden="true"></i></span>
+                <span class="btn-loading" aria-live="polite">Sending…</span>
+              </button>
+
+              <p class="form-success" id="form-success" role="alert" aria-live="polite">
+                <i class='bx bx-check-circle' aria-hidden="true"></i>
+                Message sent! I'll be in touch soon.
+              </p>
+              <p class="form-error" id="form-error" role="alert" aria-live="polite">
+                <i class='bx bx-x-circle' aria-hidden="true"></i>
+                Something went wrong. Please email me directly at mariechauke@outlook.com
+              </p>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="nav-logo-badge" aria-hidden="true">BC</span>
+        <span class="footer-name">Britney Chauke</span>
+      </div>
+      <p class="footer-tagline">
+        Building scalable, elegant, and user-focused digital solutions.
+      </p>
+      <nav class="footer-socials" aria-label="Social media links">
+        <a href="https://github.com/britneychauke" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class='bx bxl-github' aria-hidden="true"></i>
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" id="footer-linkedin">
+          <i class='bx bxl-linkedin' aria-hidden="true"></i>
+        </a>
+        <a href="mailto:mariechauke@outlook.com" aria-label="Email">
+          <i class='bx bx-envelope' aria-hidden="true"></i>
+        </a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 Britney Chauke. Built with ❤️ in Pretoria, SA.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
