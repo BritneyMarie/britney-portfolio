@@ -144,10 +144,12 @@ img {
   letter-spacing: 0.02em;
 }
 
-.pill-pink  { background: var(--color-primary-light); color: #be185d; }
-.pill-blue  { background: var(--color-secondary-light); color: #0369a1; }
-.pill-yellow{ background: var(--color-accent-light); color: #92400e; }
-.pill-green { background: #dcfce7; color: #166534; }
+.pill-pink   { background: var(--color-primary-light); color: #be185d; }
+.pill-blue   { background: var(--color-secondary-light); color: #0369a1; }
+.pill-yellow { background: var(--color-accent-light); color: #92400e; }
+.pill-green  { background: #dcfce7; color: #166534; }
+.pill-purple { background: #f3e8ff; color: #6b21a8; }
+.pill-red    { background: #fee2e2; color: #b91c1c; }
 
 /* ==============================
    SCROLL REVEAL ANIMATION

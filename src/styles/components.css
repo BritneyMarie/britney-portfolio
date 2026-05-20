@@ -298,6 +298,14 @@
   box-shadow: var(--shadow-sm);
   white-space: nowrap;
   animation: float 4s ease-in-out infinite;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.hero-badge.active {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .hero-badge i {
@@ -305,13 +313,13 @@
   color: var(--color-primary);
 }
 
-.hero-badge-1 {
+.hero-badge:nth-child(odd).active {
   bottom: 30px;
   left: -20px;
   animation-delay: 0s;
 }
 
-.hero-badge-2 {
+.hero-badge:nth-child(even).active {
   top: 30px;
   right: -20px;
   animation-delay: 2s;
@@ -432,10 +440,12 @@
   flex-shrink: 0;
 }
 
-.skills-card-header.skills-frontend i { background: var(--color-primary-light); color: var(--color-primary); }
-.skills-card-header.skills-backend  i { background: var(--color-secondary-light); color: #0284c7; }
-.skills-card-header.skills-cloud    i { background: var(--color-accent-light); color: #d97706; }
-.skills-card-header.skills-tools    i { background: #dcfce7; color: #16a34a; }
+.skills-card-header.skills-frontend  i { background: var(--color-primary-light); color: var(--color-primary); }
+.skills-card-header.skills-backend   i { background: var(--color-secondary-light); color: #0284c7; }
+.skills-card-header.skills-database  i { background: #f3e8ff; color: #7c3aed; }
+.skills-card-header.skills-security  i { background: #fee2e2; color: #dc2626; }
+.skills-card-header.skills-cloud     i { background: var(--color-accent-light); color: #d97706; }
+.skills-card-header.skills-tools     i { background: #dcfce7; color: #16a34a; }
 
 .skills-card-header h3 {
   font-family: var(--font-body);
@@ -590,6 +600,121 @@
   gap: var(--space-3);
   margin-top: auto;
   padding-top: var(--space-2);
+}
+
+/* ==============================
+   GITHUB REPOS
+   ============================== */
+.github-repos { background: var(--color-surface); }
+
+.repos-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+}
+
+.repo-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8) var(--space-8) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  transition: all var(--transition);
+  text-decoration: none;
+  color: inherit;
+}
+
+.repo-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+  border-color: var(--color-primary);
+}
+
+.repo-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.repo-card-header i {
+  font-size: 1.6rem;
+  color: var(--color-primary);
+}
+
+.repo-name {
+  font-family: var(--font-heading);
+  font-size: var(--fs-xl);
+  color: var(--color-heading);
+}
+
+.repo-description {
+  font-size: var(--fs-base);
+  color: var(--color-text);
+  line-height: 1.7;
+}
+
+.repo-highlights {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-2) var(--space-4);
+  margin: var(--space-2) 0;
+}
+
+.repo-highlights li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-sm);
+  color: var(--color-text);
+}
+
+.repo-highlights li i {
+  color: var(--color-primary);
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.repo-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: var(--space-2) 0;
+}
+
+.repo-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.repo-meta span {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.lang-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.lang-dot.lang-js   { background: #f1e05a; }
+.lang-dot.lang-html { background: #e34c26; }
+.lang-dot.lang-cs   { background: #178600; }
+
+.repos-cta {
+  text-align: center;
+  margin-top: var(--space-8);
 }
 
 /* ==============================
@@ -988,12 +1113,13 @@
   .hero-cta,
   .hero-socials { justify-content: center; }
 
-  .hero-badge-1 { left: 0; bottom: 10px; }
-  .hero-badge-2 { right: 0; top: 10px; }
+  .hero-badge:nth-child(odd).active { left: 0; bottom: 10px; }
+  .hero-badge:nth-child(even).active { right: 0; top: 10px; }
 
   /* Grids → 1 column */
   .skills-grid,
-  .projects-grid { grid-template-columns: 1fr; }
+  .projects-grid,
+  .repos-grid { grid-template-columns: 1fr; }
 
   .about-stats { grid-template-columns: repeat(2, 1fr); }
 
@@ -1002,6 +1128,8 @@
   .section-title { font-size: var(--fs-2xl); }
 
   .timeline::before { left: 0.75rem; }
+
+  .repo-highlights { grid-template-columns: 1fr; }
 }
 
 /* ==============================

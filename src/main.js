@@ -45,6 +45,29 @@ window.addEventListener(
   { passive: true }
 )
 
+// ── Rotating hero badges ───────────────────────────────────────
+;(() => {
+  const badges = document.querySelectorAll('.hero-badge')
+  if (badges.length < 2) return
+
+  let currentPair = 0
+  const pairCount = Math.ceil(badges.length / 2)
+
+  function showPair(index) {
+    badges.forEach((b) => b.classList.remove('active'))
+    const i1 = index * 2
+    const i2 = index * 2 + 1
+    if (badges[i1]) badges[i1].classList.add('active')
+    if (badges[i2]) badges[i2].classList.add('active')
+  }
+
+  showPair(0)
+  setInterval(() => {
+    currentPair = (currentPair + 1) % pairCount
+    showPair(currentPair)
+  }, 3000)
+})()
+
 // ── Init modules ───────────────────────────────────────────────
 initAnimations()
 initForm()
