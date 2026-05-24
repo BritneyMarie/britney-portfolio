@@ -622,7 +622,6 @@
   flex-direction: column;
   gap: var(--space-4);
   transition: all var(--transition);
-  text-decoration: none;
   color: inherit;
 }
 
@@ -678,12 +677,13 @@
   flex-shrink: 0;
 }
 
-.repo-live-link {
-  color: var(--color-primary);
-  text-decoration: none;
-  font-weight: 600;
+.repo-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: auto;
+  padding-top: var(--space-2);
 }
-.repo-live-link:hover { text-decoration: underline; }
 
 .repo-tech {
   display: flex;
