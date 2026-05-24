@@ -725,81 +725,55 @@
 }
 
 /* ==============================
-   EXPERIENCE / TIMELINE
+   EXPERIENCE
    ============================== */
 .experience { background: var(--color-bg); }
 
-.timeline {
-  max-width: 780px;
-  margin: 0 auto;
-  position: relative;
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
 }
 
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 1rem;
-  top: 1.5rem;
-  bottom: 1.5rem;
-  width: 2px;
-  background: linear-gradient(to bottom, var(--color-primary), var(--color-secondary));
-  border-radius: 2px;
-}
-
-.timeline-item {
-  padding-left: var(--space-12);
-  position: relative;
-  margin-bottom: var(--space-8);
-}
-
-.timeline-item:last-child { margin-bottom: 0; }
-
-.timeline-dot {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  background: var(--color-primary);
-  border: 3px solid var(--color-bg);
-  box-shadow: 0 0 0 3px var(--color-primary-light);
-  position: absolute;
-  left: 0;
-  top: var(--space-5);
-}
-
-.timeline-card {
+.experience-card {
   background: var(--color-card-bg);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-xl);
   padding: var(--space-8);
-  transition: box-shadow var(--transition);
+  transition: box-shadow var(--transition), transform var(--transition);
 }
 
-.timeline-card:hover { box-shadow: var(--shadow-md); }
+.experience-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
 
-.timeline-header {
+.experience-card-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: var(--space-4);
   margin-bottom: var(--space-5);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
   flex-wrap: wrap;
 }
 
-.timeline-role {
-  font-size: var(--fs-xl);
+.experience-role {
+  font-size: var(--fs-lg);
   font-weight: 700;
   font-family: var(--font-body);
   color: var(--color-dark);
 }
 
-.timeline-company {
+.experience-company {
   font-size: var(--fs-base);
   color: var(--color-primary);
   font-weight: 600;
   margin-top: var(--space-1);
 }
 
-.timeline-date {
+.experience-date {
   font-size: var(--fs-sm);
   font-weight: 600;
   color: var(--color-muted);
@@ -810,14 +784,14 @@
   white-space: nowrap;
 }
 
-.timeline-list {
+.experience-list {
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
   margin-bottom: var(--space-6);
 }
 
-.timeline-list li {
+.experience-list li {
   position: relative;
   padding-left: var(--space-5);
   font-size: var(--fs-sm);
@@ -825,7 +799,7 @@
   line-height: 1.65;
 }
 
-.timeline-list li::before {
+.experience-list li::before {
   content: '→';
   position: absolute;
   left: 0;
@@ -833,7 +807,7 @@
   font-weight: 700;
 }
 
-.timeline-tech {
+.experience-tech {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2);
@@ -1126,15 +1100,14 @@
   /* Grids → 1 column */
   .skills-grid,
   .projects-grid,
-  .repos-grid { grid-template-columns: 1fr; }
+  .repos-grid,
+  .experience-grid { grid-template-columns: 1fr; }
 
   .about-stats { grid-template-columns: repeat(2, 1fr); }
 
   .contact-inner { grid-template-columns: 1fr; }
 
   .section-title { font-size: var(--fs-2xl); }
-
-  .timeline::before { left: 0.75rem; }
 
   .repo-highlights { grid-template-columns: 1fr; }
 }
@@ -1146,6 +1119,5 @@
   .hero-roles  { font-size: var(--fs-base); }
   .hero-badge  { font-size: var(--fs-xs); padding: var(--space-1) var(--space-3); }
 
-  .timeline-header { flex-direction: column; }
-  .timeline-item   { padding-left: var(--space-10); }
+  .experience-card-header { flex-direction: column; }
 }
