@@ -1,12 +1,9 @@
 /**
- * Formspree contact form handler.
- *
- * ⚠️  SETUP REQUIRED:
- *   1. Go to https://formspree.io and create a free account.
- *   2. Create a new form and copy your form ID (looks like "xabcdefg").
- *   3. Replace YOUR_FORM_ID below with your actual form ID.
+ * EmailJS contact form handler.
  */
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID'
+const EMAILJS_SERVICE_ID  = 'service_4zxya5g'
+const EMAILJS_TEMPLATE_ID = 'template_mxh6xh6'
+const EMAILJS_PUBLIC_KEY   = 'VEss2FICj5mnFCIF2'
 
 export function initForm() {
   const form       = document.getElementById('contact-form')
@@ -14,6 +11,11 @@ export function initForm() {
   const errorMsg   = document.getElementById('form-error')
 
   if (!form) return
+
+  // Initialise EmailJS
+  if (window.emailjs) {
+    window.emailjs.init(EMAILJS_PUBLIC_KEY)
+  }
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault()
@@ -31,21 +33,14 @@ export function initForm() {
     errorMsg.classList.remove('visible')
 
     try {
-      const response = await fetch(FORMSPREE_ENDPOINT, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json',
-        },
-        body: JSON.stringify({ name, email, message }),
+      await window.emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+        name,
+        email,
+        message,
       })
 
-      if (response.ok) {
-        form.reset()
-        successMsg.classList.add('visible')
-      } else {
-        errorMsg.classList.add('visible')
-      }
+      form.reset()
+      successMsg.classList.add('visible')
     } catch {
       errorMsg.classList.add('visible')
     } finally {
