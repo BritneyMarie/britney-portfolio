@@ -1121,3 +1121,214 @@
 
   .experience-card-header { flex-direction: column; }
 }
+
+/* ============================================================
+   SERVICES / PRICING
+   ============================================================ */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-6);
+  align-items: stretch;
+}
+
+.service-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(30, 41, 59, 0.08); }
+
+.service-card.is-featured {
+  border-color: var(--color-primary);
+  box-shadow: 0 10px 30px rgba(244, 114, 182, 0.14);
+  position: relative;
+}
+.service-flag {
+  position: absolute;
+  top: -12px;
+  left: var(--space-8);
+  background: var(--color-primary);
+  color: #fff;
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+
+.service-name {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+.service-price {
+  font-family: var(--font-heading);
+  font-size: var(--fs-4xl);
+  line-height: 1;
+  color: var(--color-dark);
+}
+.service-price small {
+  display: block;
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: 400;
+  color: var(--color-muted);
+  margin-top: var(--space-2);
+}
+.service-turnaround {
+  font-size: var(--fs-sm);
+  color: var(--color-dark-2);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+.service-features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  flex: 1;
+}
+.service-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: var(--fs-sm);
+  color: var(--color-dark-2);
+  line-height: 1.5;
+}
+.service-features i { color: var(--color-primary); flex-shrink: 0; margin-top: 2px; }
+.service-card .btn { width: 100%; justify-content: center; }
+
+.services-note {
+  margin-top: var(--space-8);
+  padding: var(--space-6);
+  background: var(--color-primary-light);
+  border-radius: 12px;
+  font-size: var(--fs-sm);
+  color: var(--color-dark-2);
+  line-height: 1.65;
+}
+.services-note strong { color: var(--color-dark); }
+
+/* Care plans — compact row */
+.care-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+.care-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: var(--space-6);
+}
+.care-card h4 {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin: 0 0 var(--space-2);
+}
+.care-price {
+  font-family: var(--font-heading);
+  font-size: var(--fs-2xl);
+  color: var(--color-dark);
+}
+.care-price span { font-family: var(--font-body); font-size: var(--fs-sm); color: var(--color-muted); }
+.care-card p { font-size: var(--fs-sm); color: var(--color-dark-2); margin: var(--space-3) 0 0; }
+
+/* ============================================================
+   PROCESS
+   ============================================================ */
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: var(--space-6);
+  counter-reset: step;
+}
+.process-step {
+  position: relative;
+  padding-top: var(--space-6);
+  border-top: 2px solid var(--color-border);
+  counter-increment: step;
+}
+.process-step::before {
+  content: counter(step, decimal-leading-zero);
+  position: absolute;
+  top: -0.85em;
+  left: 0;
+  background: var(--color-bg);
+  padding-right: var(--space-3);
+  font-family: var(--font-heading);
+  font-size: var(--fs-xl);
+  color: var(--color-primary);
+  line-height: 1;
+}
+.process-step h3 {
+  font-family: var(--font-heading);
+  font-size: var(--fs-xl);
+  color: var(--color-dark);
+  margin: 0 0 var(--space-2);
+}
+.process-step p { font-size: var(--fs-sm); color: var(--color-dark-2); margin: 0; line-height: 1.6; }
+
+/* ============================================================
+   HERO — availability pill
+   ============================================================ */
+.hero-availability {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-6);
+  padding: 7px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  font-size: var(--fs-xs);
+  color: var(--color-dark-2);
+  background: var(--color-card-bg);
+}
+.hero-availability .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22C55E;
+  flex-shrink: 0;
+}
+
+/* Two-column form row */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+@media (max-width: 560px) { .form-row { grid-template-columns: 1fr; } }
+
+.form-group select {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  color: var(--color-dark);
+  background: var(--color-card-bg);
+}
+.form-group select:focus { outline: 2px solid var(--color-primary); outline-offset: 1px; }
+
+/* Accent word inside headings — was referenced in the markup but never defined */
+.text-primary { color: var(--color-primary-deep); }

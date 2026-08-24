@@ -23,9 +23,22 @@ export function initForm() {
     const name    = form.querySelector('#name').value.trim()
     const email   = form.querySelector('#email').value.trim()
     const message = form.querySelector('#message').value.trim()
+    const enquiry = form.querySelector('#enquiry')?.value ?? ''
+    const budget  = form.querySelector('#budget')?.value ?? ''
 
-    // Client-side guard — all fields required
+    // Client-side guard — name, email and message are required
     if (!name || !email || !message) return
+
+    // Prepend the qualifying answers to the body as well as sending them as their
+    // own variables, so they show up even if the EmailJS template only renders {{message}}
+    const details = [
+      enquiry ? `Enquiry: ${enquiry}` : '',
+      budget ? `Budget: ${budget}` : '',
+    ]
+      .filter(Boolean)
+      .join('\n')
+
+    const body = details ? `${details}\n\n${message}` : message
 
     // Loading state
     form.classList.add('loading')
@@ -36,7 +49,9 @@ export function initForm() {
       await window.emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
         name,
         email,
-        message,
+        message: body,
+        enquiry,
+        budget,
       })
 
       form.reset()
