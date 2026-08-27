@@ -1363,3 +1363,12 @@
 @media (max-width: 520px) {
   .rate-info { max-width: 100%; }
 }
+
+/* Capabilities one-liner under services */
+.capabilities-line {
+  margin-top: var(--space-5);
+  font-size: var(--fs-sm);
+  line-height: 1.7;
+  color: var(--color-muted);
+}
+.capabilities-line strong { color: var(--color-dark-2); }
